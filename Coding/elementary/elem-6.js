@@ -8,8 +8,6 @@ the following to work with various constants
 
 REFERENCES:
 
-https://www.delftstack.com/howto/javascript/javascript-float-to-int/
-
 */
 
 function sumUp (lastNum) {
@@ -24,7 +22,7 @@ function sumUp (lastNum) {
 }
 
 function getProduct (lastNum) {
-    // Sum all numbers from 1..lastnum
+    // Get factorial of number
     totValue=1;
     if (lastNum > 0 ) {
         for (let i=1; i<= lastNum; i++) {
