@@ -31,10 +31,10 @@ function testPalindrome(testStr) {
     newStr=newStr.toUpperCase();
     revStr=ReverseString(newStr);
     if (newStr == revStr) {
-        print("YAY " + testStr + " IS a palindrome!\n");
+        console.log("YAY " + testStr + " IS a palindrome!\n");
     } else {
-        print("SORRY " + testStr + " isn't a palindrome.");
-        print( newStr + " ===> " + revStr + "\n");
+        console.log("SORRY " + testStr + " isn't a palindrome.");
+        console.log( newStr + " ===> " + revStr + "\n");
     }
 }
     

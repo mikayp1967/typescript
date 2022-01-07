@@ -29,6 +29,17 @@ Typescript/JS coding examples and docs
     tsc file1.ts                                            # Compile ts to js
 
 
+## References
+
+* Install nodejs on Amazon Linux 2
+    - https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/setting-up-node-on-ec2-instance.html
+* Typescript Lambda example
+    - https://medium.com/@bdleecs95/building-an-aws-lambda-with-typescript-and-deploying-with-serverless-9e8c5e1cdfeb
+* Serverless framework - I actually have no clue what this does or why I need it and docs don't really explain that
+    - https://www.serverless.com/framework/docs/
+
+
+
 
     
 

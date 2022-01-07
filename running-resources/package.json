@@ -1,0 +1,26 @@
+{
+  "name": "running-resources",
+  "version": "1.0.0",
+  "description": "list any chargable active resources and potentially stops/deletes them",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikayp1967/typescript.git"
+  },
+  "keywords": [
+    "lambda",
+    "typescript"
+  ],
+  "author": "Michele Pietrantonio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mikayp1967/typescript/issues"
+  },
+  "homepage": "https://github.com/mikayp1967/typescript#readme",
+  "devDependencies": {
+    "@types/node": "^17.0.8"
+  }
+}

@@ -1,0 +1,52 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: List running resources function
+Globals:
+  Function:
+    Runtime: nodejs12.x
+    Timeout: 60
+    MemorySize: 192
+Resources:
+  RunningResFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: index.handler
+      CodeUri: ./
+      Environment:
+        Variables:
+          MY_SNS_TOPIC_ARN: !Ref RunningResourcesNotificationTopicNode
+          MY_AWS_REGION: !Ref "AWS::Region"
+      Events:
+        RunningResAPI:
+          Type: Api
+          Properties:
+            Path: /list
+            Method: GET
+        RRSchedule:
+          Type: Schedule
+          Properties:
+            Schedule: 'cron(*/20 20 * * ? *)'
+            Description: 'Schedule Resource shutdown/check'
+            Enabled: true
+            Name: 'Running_Resources_Node'
+            Input: '{"Action": "List"}'            
+      Policies:
+        - AmazonEC2ReadOnlyAccess
+        - AmazonSNSFullAccess
+        - AmazonRDSReadOnlyAccess
+
+  RunningResourcesNotificationTopicNode:
+    Type: AWS::SNS::Topic
+    Properties:
+      Subscription:
+      - Endpoint: "mikayp1967@gmail.com"
+        Protocol: email
+      Tags:
+        - Key: "Project"
+          Value: "running-resources-node"
+
+
+Outputs:
+  LisAllApi:
+    Description: "API endpoint to list running resources"
+    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/list"
