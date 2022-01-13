@@ -37,7 +37,13 @@ Typescript/JS coding examples and docs
     - https://medium.com/@bdleecs95/building-an-aws-lambda-with-typescript-and-deploying-with-serverless-9e8c5e1cdfeb
 * Serverless framework - I actually have no clue what this does or why I need it and docs don't really explain that
     - https://www.serverless.com/framework/docs/
-
+* AWS-SDK
+    - https://www.npmjs.com/package/aws-sdk
+    - https://github.com/aws/aws-sdk-js
+* Documentation I really should read - and hits the sweetspot of way too dull and cloggy for me to ever read
+    - https://docs.aws.amazon.com/lambda/latest/dg/lambda-nodejs.html
+* AWS-SDK API Refrerence
+    - https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/EC2.html
 
 
 
